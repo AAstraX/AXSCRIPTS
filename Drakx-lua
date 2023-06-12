@@ -1,0 +1,35 @@
+-- Replace 6284583030 with the PlaceId of the game you want to detect
+
+if _G.DetectDiffirentGameWebhookGrabberKicker == true then
+
+    local targetGameId = 6284583030
+
+    local additionalGameIds = {targetGameId, 7722306047,10321372166, 12610002282, 11725212117} -- Add the PlaceIds of the games you want to detect
+
+    -- Check if the player is in any of the specified games
+
+    local isPlayerInTargetGame = false
+
+    for i = 1, #additionalGameIds do
+
+        if game.PlaceId == additionalGameIds[i] then
+
+            isPlayerInTargetGame = true
+
+            break
+
+        end
+
+    end
+
+    if isPlayerInTargetGame then
+
+        print("Playing Pet Simulator X Rn Lol")
+
+    else
+
+        game.Players.LocalPlayer:Kick("Hmmm sus not in game.")
+
+    end
+
+end
